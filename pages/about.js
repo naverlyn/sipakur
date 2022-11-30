@@ -1,4 +1,5 @@
 import NavBar from "../components/NavBar";
+import Footer from "../components/Footer";
 import Head from "next/head";
 
 
@@ -15,6 +16,7 @@ export default function About() {
                 <h3 className="text-gray-700 text-2xl font-medium">About Page</h3>
                 <span className="mt-3 text-sm text-gray-500">SICAKUR | About</span>
             </div>
+            <Footer />
         </>
     );
 }
