@@ -2,7 +2,7 @@ import Navbar from '../components/NavBar'
 import React from 'react'
 import { useState } from 'react'
 import { useRouter } from 'next/router';
-
+import InferenceService from '../services/InferenceService';
 
 export default function Home() {
   const router = useRouter();
@@ -26,11 +26,13 @@ export default function Home() {
     event.preventDefault();
 
     if (selected === "men") {
-      if (ukuranDada <= 86 >= 89 && tinggiBadan <= 166 >= 170) {
-        setUkuranBaju("XS")
-      } else {
-        setUkuranBaju("Masuknya ke else, bukan error gak tampil, logika lu benerin coekkkk")
-      }
+      var inference = InferenceService.manInferenceCalculator(tinggiBadan, ukuranDada);
+      var size = InferenceService.manSizeCalculator(inference);
+      setUkuranBaju(size);
+    } else {
+      var inference = InferenceService.womanInferenceCalculator(ukuranDada, ukuranPinggang);
+      var size = InferenceService.womanSizeCalculator(inference);
+      setUkuranBaju(size);
     }
   }
 
@@ -62,6 +64,7 @@ export default function Home() {
   //     }
   //   }
   // }
+
   return (
     <>
       <Navbar />
