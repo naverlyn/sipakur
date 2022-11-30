@@ -1,8 +1,9 @@
 import Navbar from '../components/NavBar'
+import Footer from '../components/Footer';
 import React from 'react'
 import { useState } from 'react'
 import { useRouter } from 'next/router';
-
+import InferenceService from '../services/InferenceService';
 
 export default function Home() {
   const router = useRouter();
@@ -26,11 +27,13 @@ export default function Home() {
     event.preventDefault();
 
     if (selected === "men") {
-      if (ukuranDada <= 86 >= 89 && tinggiBadan <= 166 >= 170) {
-        setUkuranBaju("XS")
-      } else {
-        setUkuranBaju("Masuknya ke else, bukan error gak tampil, logika lu benerin coekkkk")
-      }
+      var inference = InferenceService.manInferenceCalculator(tinggiBadan, ukuranDada);
+      var size = InferenceService.manSizeCalculator(inference);
+      setUkuranBaju(size);
+    } else {
+      var inference = InferenceService.womanInferenceCalculator(ukuranDada, ukuranPinggang);
+      var size = InferenceService.womanSizeCalculator(inference);
+      setUkuranBaju(size);
     }
   }
 
@@ -62,6 +65,7 @@ export default function Home() {
   //     }
   //   }
   // }
+
   return (
     <>
       <Navbar />
@@ -113,6 +117,14 @@ export default function Home() {
                             placeholder="Ukuran Dada dalam CM"
                             value={ukuranDada}
                             onChange={(e) => (setUkuranDada(e.target.value))} />
+                          <div className="btn-group pt-5">
+                            <button className="btn btn-active">Submit</button>
+                            <button className="btn" onClick={refresh}>Refresh</button>
+                          </div>
+                          <div className='gap-4 pt-5'>
+                            <p className="text-center text-gray-500 text-xl text-bold"> Ukuran Baju Anda Adalah </p>
+                            <p className="text-center text-gray-500 text-xl text-bold" name="baju_size"> {ukuranBaju} </p>
+                          </div>
                         </div>
                       )}
                     {
@@ -130,17 +142,17 @@ export default function Home() {
                             placeholder="Ukuran Pinggang dalam CM"
                             value={ukuranPinggang}
                             onChange={(e) => (setUkuranPinggang(e.target.value))} />
+                          <div className="btn-group pt-5">
+                            <button className="btn btn-active">Submit</button>
+                            <button className="btn" onClick={refresh}>Refresh</button>
+                          </div>
+                          <div className='gap-4 pt-5'>
+                            <p className="text-center text-gray-500 text-xl text-bold"> Ukuran Baju Anda Adalah </p>
+                            <p className="text-center text-gray-500 text-xl text-bold" name="baju_size"> {ukuranBaju} </p>
+                          </div>
                         </div>
                       )
                     }
-                    <div className="btn-group pt-5">
-                      <button className="btn btn-active">Submit</button>
-                      <button className="btn" onClick={refresh}>Refresh</button>
-                    </div>
-                    <div className='gap-4 pt-5'>
-                      <p className="text-center text-gray-500 text-xl text-bold"> Ukuran Baju Anda Adalah </p>
-                      <p className="text-center text-gray-500 text-xl text-bold" name="baju_size"> {ukuranBaju} </p>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -148,6 +160,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   )
 }
