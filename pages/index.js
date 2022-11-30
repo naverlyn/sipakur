@@ -24,9 +24,12 @@ export default function Home() {
 
   let calc_size = (event) => {
     event.preventDefault();
+
     if (selected === "men") {
       if (ukuranDada <= 86 >= 89 && tinggiBadan <= 166 >= 170) {
         setUkuranBaju("XS")
+      } else {
+        setUkuranBaju("Masuknya ke else, bukan error gak tampil, logika lu benerin coekkkk")
       }
     }
   }
