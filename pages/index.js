@@ -69,7 +69,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <div className="w-full h-screen flex flex-col bg-gradient-to-tl from-slate-200 to-sky-400">
+      <div className="w-full h-screen flex flex-col bg-hero-overlapping-circles-donker">
         <div className="max-w-7xl mx-auto w-full flex flex-col my-6 gap-9 pt-5">
           <div className='text-2xl font-bold text-center'>Sistem Pakar Pengukuran Baju Dewasa </div>
           <div className="col-span-12 sm:col-span-6 lg:col-span-7">
