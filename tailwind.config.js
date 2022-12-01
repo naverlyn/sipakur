@@ -38,10 +38,6 @@ module.exports = {
         "25": "0.25",
         "10": "0.1",
       },
-
-      foreground: {
-        default: "#9C92AC",
-      }
     }),
   ],
 }
