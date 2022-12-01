@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import Navbar from '../components/NavBar'
 import Footer from '../components/Footer';
 import React from 'react'
@@ -68,10 +69,17 @@ export default function Home() {
 
   return (
     <>
+      <Head>
+        <title>SICAKUR | Home</title>
+        <meta name="home" content="Landing Page" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <Navbar />
-      <div className="w-full h-screen flex flex-col bg-hero-overlapping-circles-donker">
+      <div className="w-full h-screen flex flex-col bg-hero-overlapping-circles-donker bg-cyan-100">
         <div className="max-w-7xl mx-auto w-full flex flex-col my-6 gap-9 pt-5">
-          <div className='text-2xl font-bold text-center'>Sistem Pakar Pengukuran Baju Dewasa </div>
+          <div className='text-2xl font-bold text-center'>
+            <p className='underline'>Sistem Pakar Pengukuran Baju Dewasa</p>
+            </div>
           <div className="col-span-12 sm:col-span-6 lg:col-span-7">
             <form onSubmit={calc_size}>
               <div className="card card-compact bg-base-100 border rounded-xl shadow">
@@ -89,17 +97,17 @@ export default function Home() {
                     </span>
                   </div>
                 </div>
-                <div className="card-body min-h-full">
+                <div className="card-body min-h-full shadow-sm hover:shadow-xl ease-in-out transition-shadow">
                   <div className="rounded-md border bg-white p-5 my-3 border-dashed">
                     <label className='label'>Pilih Jenis Kelamin:</label>
-                    <select className="select select-bordered w-full max-w-full" onChange={(e) => (handleChange(e))}>
+                    <select className="select select-bordered w-full max-w-full" onChange={(e) => (handleChange(e))} autoFocus id='null'>
                       <option value="null">-Pilih-</option>
                       <option value="men">Laki-Laki</option>
                       <option value="woman">Perempuan</option>
                     </select>
                     {
                       selected === "null" && (
-                        <label className='label text-red-600 text-s bold'>Pilih, blok.</label>
+                        <label className='label text-red-600 text-s bold'>Pilih dulu, blok.</label>
                       )
                     }
                     {
