@@ -2,9 +2,11 @@
 export default function NavBar() {
     return (
         <>
-            <div className="navbar bg-white/75 backdrop-blur sticky left-0 top-0 z-[9999] shadow-lg">
+            <div className="navbar bg-white/40 backdrop-blur-sm sticky left-0 top-0 z-[9999] shadow-lg rounded-xl">
                 <div className="max-w-10xl w-full mx-auto px-6 text-xl font-bold">
-                    <a className="text-lg font-bold btn btn-ghost" href="/">SICAKUR</a>
+                    <div className="flex justify-between">
+                        <a className="text-lg font-bold btn btn-ghost" href="/">SICAKUR</a>
+                    </div>
                 </div>
                 <div className="flex justify-end flex-1 px-2">
                     <div className="flex items-stretch">
