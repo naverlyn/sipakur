@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Navbar from '../components/NavBar'
+import Footer from '../components/Footer';
 import React from 'react'
 import { useState } from 'react'
 import { useRouter } from 'next/router';
@@ -167,6 +168,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   )
 }
