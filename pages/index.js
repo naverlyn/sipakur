@@ -75,9 +75,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-      <div className="w-full h-screen flex flex-col bg-hero-overlapping-circles-donker bg-cyan-100">
+      <div className="w-full h-screen flex flex-col bg-hero-topography-cyan-25 bg-cyan-50">
         <div className="max-w-7xl mx-auto w-full flex flex-col my-6 gap-9 pt-5">
-          <div className='text-2xl font-bold text-center'>
+          <div className='text-4xl font-bold text-center'>
             <p className='underline'>Sistem Pakar Pengukuran Baju Dewasa</p>
             </div>
           <div className="col-span-12 sm:col-span-6 lg:col-span-7">
@@ -107,7 +107,7 @@ export default function Home() {
                     </select>
                     {
                       selected === "null" && (
-                        <label className='label text-red-600 text-s bold'>Pilih dulu, blok.</label>
+                        <label className='label text-red-600 text-s bold'>Mohon pilih jenis kelamin terlebih dulu!</label>
                       )
                     }
                     {
