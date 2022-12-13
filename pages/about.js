@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Navbar from '../components/NavBar'
 import Footer from '../components/Footer';
 import React from 'react';
+import Image from 'next/image';
 
 export default function Home() {
   return (
@@ -17,7 +18,10 @@ export default function Home() {
           <div className='text-4xl font-bold text-center'>
             <p className='underline'>Pengukuran Baju Dewasa Indonesia </p>
           </div>
-          <div className='card bg-base-100 shadow-xl max-w-screen-xl h-full gap-9 p-7'>
+          <div className='card bg-base-100 shadow-xl max-w-screen-xl h-full gap-9 p-5'>
+          <div className='card-title underline font-bold'>
+            <p>Tentang</p>
+          </div>  
             <section className='text-2xl font-Dosis text-justify'>
             <p>Ukuran baju merupakan rujukan utama pengguna saat memilih baju yang pas bagi tubuh nya. Ukuran baju yang sangat umum digunakan dan sangat sering di temui di pasaran adalah kelompok ukuran S,M,L,XL dan XXL .</p>
           </section>
@@ -29,11 +33,11 @@ export default function Home() {
           </div>
           <div className='grid grid-cols-3 gap-12'>
             <div className="card w-96 bg-base-100 shadow-xl">
-              <figure><img src="https://placeimg.com/400/225/arch" alt="wita_image" /></figure>
+              <figure><Image src={"/images/1.jpg"} width={500} height={500}/></figure>
               <div className="card-body">
                 <h2 className="card-title font-bold">
                   Wita
-                  <div className="badge badge-primary">20.14.1.0059</div>
+                  <div className="badge badge-warning">20.14.1.0059</div>
                 </h2>
                 <p className='text-s'>Ketua Kelompok</p>
                 <div className="card-actions justify-end">
@@ -41,11 +45,11 @@ export default function Home() {
               </div>
             </div>
             <div className="card w-96 bg-base-100 shadow-xl">
-              <figure><img src="https://placeimg.com/400/225/arch" alt="septian_image" /></figure>
+              <figure><Image src={"/images/3.jpg"} width={500} height={500} /></figure>
               <div className="card-body">
                 <h2 className="card-title font-bold">
                 Septian Nugraha Kartadilaga
-                  <div className="badge badge-secondary">20.14.1.0073</div>
+                  <div className="badge badge-warning">20.14.1.0073</div>
                 </h2>
                 <p className='text-s'>Anggota</p>
                 <div className="card-actions justify-end">
@@ -53,11 +57,11 @@ export default function Home() {
               </div>
             </div>
             <div className="card w-96 bg-base-100 shadow-xl">
-              <figure><img src="https://placeimg.com/400/225/arch" alt="jawaril_image" /></figure>
+              <figure><Image src={"/images/2.jpg"} width={500} height={500} /></figure>
               <div className="card-body">
                 <h2 className="card-title font-bold">
                 Jawaril Haq Al-Azkiya
-                  <div className="badge badge-secondary">20.14.1.0025</div>
+                  <div className="badge badge-warning">20.14.1.0025</div>
                 </h2>
                 <p className='text-s'>Anggota</p>
                 <div className="card-actions justify-end">
