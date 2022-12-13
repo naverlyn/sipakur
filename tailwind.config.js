@@ -5,7 +5,11 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'Klee One': ['Klee One', 'sans-serif'],
+      }
+    },
   },
   plugins: [
     require('@tailwindcss/aspect-ratio'),
