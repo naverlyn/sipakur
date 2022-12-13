@@ -7,7 +7,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'Klee One': ['Klee One', 'sans-serif'],
+        'Klee-One': ['"Klee One"', 'cursive'],
+        'Dosis': ['Dosis', 'sans-serif'],
       }
     },
   },
@@ -23,7 +24,7 @@ module.exports = {
       // the list of patterns you want to generate a class for
       // the names must be in kebab-case
       // an empty array will generate all 87 patterns
-      patterns: ["skulls", "polka-dots", "overlapping-circles", "bubbles", "wiggle", "bathroom-floor"],
+      patterns: ["skulls", "polka-dots", "overlapping-circles", "bubbles", "wiggle", "bathroom-floor", "topography"],
     
       // The foreground colors of the pattern
       colors: {
