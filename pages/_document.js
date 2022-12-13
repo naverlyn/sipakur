@@ -4,7 +4,7 @@ export default function Document() {
     return (
         <Html data-theme="light">
             <Head />
-            <body className="w-full h-full bg-hero-overlapping-circles-donker bg-cyan-100">
+            <body>
                 <Main />
                 <NextScript />
             </body>
