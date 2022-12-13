@@ -1,73 +1,75 @@
-import NavBar from "../components/NavBar";
-import Footer from "../components/Footer";
-import Head from "next/head";
+import Head from 'next/head';
+import Navbar from '../components/NavBar'
+import Footer from '../components/Footer';
+import React from 'react';
 
-
-export default function About() {
-    return (
-        <>
-            <Head>
-                <title>SICAKUR | About</title>
-                <meta name="tentang" content="Tentang Kami" />
-                <link rel="icon" href="/favicon.ico" />
-            </Head>
-            <NavBar />
-            <div className="w-screen h-screen flex flex-col">
-                <div className="container">
-                    <div className="flex flex-col items-center justify-center w-full h-full">
-                        <div class="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5">
-                            <div className="card card-compact w-96 bg-base-100 shadow-xl">
-                                <figure><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure>
-                                <div className="card-body">
-                                    <h2 className="card-title">Wita</h2>
-                                    <p className="text-gray-700 text-xs">
-                                        Ketua Kelompok Pengantar Intelegensi Buatan
-                                    </p>
-                                    <p className="text-gray-700 text-base">Hobi saya adalah membaca dan mendengarkan musik.</p>
-                                    <div class="px-0 pt-4 pb-2">
-                                        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#music</span>
-                                        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#reading</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5">
-                            <div className="card card-compact w-96 bg-base-100 shadow-xl">
-                                <figure><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure>
-                                <div className="card-body">
-                                    <h2 className="card-title">Septian Nugraha Kartadilaga</h2>
-                                    <p class="text-gray-700 text-xs">
-                                        Anggota
-                                    </p>
-                                    <p class="text-gray-700 text-base">
-                                        Saya senang bermain futsal.
-                                    </p>
-                                    <div class="px-0 pt-4 pb-2">
-                                        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#soccer</span>
-                                        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#sport</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="card card-compact w-96 bg-base-100 shadow-xl">
-                                <figure><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure>
-                                <div className="card-body">
-                                    <h2 className="card-title">Jawaril Haq Al-Azkiya</h2>
-                                    <p class="text-gray-700 text-xs">
-                                        Anggota
-                                    </p>
-                                    <p class="text-gray-700 text-xs">
-                                        Ngorok bossssssssssssssssss
-                                    </p>
-                                    <div class="px-0 pt-4 pb-2">
-                                        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#sleeping</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+export default function Home() {
+  return (
+    <>
+      <Head>
+        <title>SICAKUR | About</title>
+        <meta name="about" content="Tentang Kami" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <Navbar />
+      <div className="w-full h-screen flex flex-col bg-hero-skulls-blue-dark-10 bg-cyan-100">
+        <div className="max-w-7xl mx-auto w-full flex flex-col my-6 gap-9 pt-5">
+          <div className='text-2xl font-bold text-center'>
+            <p className='underline'>Pengukuran Baju Dewasa Indonesia (frontnya yang gede)</p>
+          </div>
+          <div className='text-3xl font-kleeOne text-justify'>
+            <p>Ukuran baju merupakan rujukan utama pengguna saat memilih baju yang pas bagi tubuh nya. Ukuran baju yang sangat umum digunakan dan sangat sering di temui di pasaran adalah kelompok ukuran S,M,L,XL dan XXL .</p>
+          </div>
+          <div className='text-4xl font-bold'>
+            <p>Team:</p>
+          </div>
+          <div className='grid grid-cols-3 gap-12'>
+            <div className="card w-96 bg-base-100 shadow-xl">
+              <figure><img src="https://placeimg.com/400/225/arch" alt="wita_image" /></figure>
+              <div className="card-body">
+                <h2 className="card-title">
+                  Wita
+                  <div className="badge badge-primary">20.14.1.0002</div>
+                </h2>
+                <p>Ngorok bos</p>
+                <div className="card-actions justify-end">
+                  <div className="badge badge-outline">#sleeping</div>
+                  <div className="badge badge-outline">#not_productive</div>
                 </div>
+              </div>
             </div>
-            <Footer />
-        </>
-    );
+            <div className="card w-96 bg-base-100 shadow-xl">
+              <figure><img src="https://placeimg.com/400/225/arch" alt="septian_image" /></figure>
+              <div className="card-body">
+                <h2 className="card-title">
+                  Shoes!
+                  <div className="badge badge-secondary">NEW</div>
+                </h2>
+                <p>If a dog chews shoes whose shoes does he choose?</p>
+                <div className="card-actions justify-end">
+                  <div className="badge badge-outline">Fashion</div>
+                  <div className="badge badge-outline">Products</div>
+                </div>
+              </div>
+            </div>
+            <div className="card w-96 bg-base-100 shadow-xl">
+              <figure><img src="https://placeimg.com/400/225/arch" alt="jawaril_image" /></figure>
+              <div className="card-body">
+                <h2 className="card-title">
+                  Shoes!
+                  <div className="badge badge-secondary">NEW</div>
+                </h2>
+                <p>If a dog chews shoes whose shoes does he choose?</p>
+                <div className="card-actions justify-end">
+                  <div className="badge badge-outline">Fashion</div>
+                  <div className="badge badge-outline">Products</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <Footer />
+    </>
+  )
 }
