@@ -19,24 +19,24 @@ export default function Home() {
             <p className='underline'>Pengukuran Baju Dewasa Indonesia </p>
           </div>
           <div className='card bg-base-100 shadow-xl max-w-screen-xl h-full gap-9 p-5'>
-          <div className='card-title underline font-bold'>
-            <p>Tentang</p>
-          </div>  
+            <div className='card-title underline font-bold'>
+              <p>Tentang</p>
+            </div>
             <section className='text-2xl font-Dosis text-justify'>
-            <p>Ukuran baju merupakan rujukan utama pengguna saat memilih baju yang pas bagi tubuh nya. Ukuran baju yang sangat umum digunakan dan sangat sering di temui di pasaran adalah kelompok ukuran S,M,L,XL dan XXL .</p>
-          </section>
+              <p>Ukuran baju merupakan rujukan utama pengguna saat memilih baju yang pas bagi tubuh nya. Ukuran baju yang sangat umum digunakan dan sangat sering di temui di pasaran adalah kelompok ukuran S,M,L,XL dan XXL .</p>
+            </section>
 
 
-        </div>
+          </div>
           <div className='text-4xl font-bold'>
             <p>Team:</p>
           </div>
           <div className='grid grid-cols-3 gap-12'>
             <div className="card w-96 bg-base-100 shadow-xl">
-              <figure><Image src={"/images/1.jpg"} width={500} height={500}/></figure>
+              <figure><Image src={"/images/1.jpg"} width={500} height={500} alt="wita_image" /></figure>
               <div className="card-body">
                 <h2 className="card-title font-bold">
-                  Wita
+                  Wita Nurjanah
                   <div className="badge badge-warning">20.14.1.0059</div>
                 </h2>
                 <p className='text-s'>Ketua Kelompok</p>
@@ -45,10 +45,10 @@ export default function Home() {
               </div>
             </div>
             <div className="card w-96 bg-base-100 shadow-xl">
-              <figure><Image src={"/images/3.jpg"} width={500} height={500} /></figure>
+              <figure><Image src={"/images/3.jpg"} width={500} height={500} alt="septian_image" /></figure>
               <div className="card-body">
                 <h2 className="card-title font-bold">
-                Septian Nugraha Kartadilaga
+                  Septian Nugraha Kartadilaga
                   <div className="badge badge-warning">20.14.1.0073</div>
                 </h2>
                 <p className='text-s'>Anggota</p>
@@ -57,10 +57,10 @@ export default function Home() {
               </div>
             </div>
             <div className="card w-96 bg-base-100 shadow-xl">
-              <figure><Image src={"/images/2.jpg"} width={500} height={500} /></figure>
+              <figure><Image src={"/images/2.jpg"} width={500} height={500} alt="jawaril_image"/></figure>
               <div className="card-body">
                 <h2 className="card-title font-bold">
-                Jawaril Haq Al-Azkiya
+                  Jawaril Haq Al-Azkiya
                   <div className="badge badge-warning">20.14.1.0025</div>
                 </h2>
                 <p className='text-s'>Anggota</p>
@@ -69,7 +69,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          </div>
+        </div>
       </div>
       <Footer />
     </>
