@@ -70,7 +70,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>SICAKUR | Home</title>
+        <title>SIPAKUR | Home</title>
         <meta name="home" content="Landing Page" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
