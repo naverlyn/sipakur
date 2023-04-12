@@ -9,6 +9,7 @@ module.exports = {
       fontFamily: {
         'Klee-One': ['"Klee One"', 'cursive'],
         'Dosis': ['Dosis', 'sans-serif'],
+        'Allura': ['Allura', 'cursive'],
       }
     },
   },
